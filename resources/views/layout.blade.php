@@ -9,7 +9,7 @@
     <script type="text/javascript" >
         $(document).ready(function()
         {
-            function limpa_formulário_cep()
+            function limpa_formulario_cep()
             {
                 // Limpa valores do formulário de cep.
                 $("#cep").val("");
@@ -29,7 +29,7 @@
                 if (cep != "") {
                     var validacep = /^[0-9.]{8}$/;
                     if (!validacep.test(cep)) {
-                        limpa_formulário_cep();
+                        limpa_formulario_cep();
                         alert("Formato de CEP inválido.");
                     }
                 }

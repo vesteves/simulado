@@ -22,12 +22,11 @@ class CorreiosController extends Controller
     {
         $dados = Request::all();
         if ($dados !== []) {
-            if ($dados['cep'] == "") {
+            if (!empty($dados['cep'])){
+                $cep = $dados["cep"];
+            }else{
                 return view('correios', ['message' => 'Não é permitida consulta vazia.']);
             }
-        }
-        if (isset($dados["cep"])) {
-            $cep = $dados["cep"];
         }
 
         $headers = array(
